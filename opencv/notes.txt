@@ -1,0 +1,9 @@
+Ultra HD -> 3800 * 2100
+Full HD -> 1920 * 1080 
+HD -> 1320 * 720 
+
+GitHub/C++/Pixhawk/PID
+Flask Backend 
+Take file from User -> Resize 
+Download 
+Eg: image resizer
