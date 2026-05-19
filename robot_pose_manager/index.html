@@ -334,7 +334,7 @@ async function runSequence(cycle, total) {
       await fetch('/stepper?num=3&angle='+p.j3,{method:'POST'});
       await fetch('/gripper?state='+p.gripper,{method:'POST'});
     } catch(e){}
-    await sleep(500)
+    await sleep(200)
   }
   document.querySelectorAll('.card').forEach(c=>c.classList.remove('active-run'));
 }

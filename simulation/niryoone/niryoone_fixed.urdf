@@ -1,0 +1,629 @@
+<?xml version="1.0"?>
+<robot name="NiryoOne">
+    <link name="robot_base">
+        <collision name="NiryoOne">
+            <origin xyz="-0.300000 0.269000 0.051000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="niryoone_robot_base_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="visible">
+            <origin xyz="-0.300000 0.269000 0.051000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="niryoone_visible_vis_1.dae" />
+            </geometry>
+            <material name="visible_material">
+                <color rgba="0.460000 0.805600 1.000000 1.0" />
+            </material>
+        </visual>
+        <visual name="visible">
+            <origin xyz="-0.300000 0.269000 0.051000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="niryoone_visible_vis_2.dae" />
+            </geometry>
+            <material name="visible_material">
+                <color rgba="0.150000 0.150000 0.150000 1.0" />
+            </material>
+        </visual>
+        <visual name="Cuboid">
+            <origin xyz="-0.624921 0.275036 0.010000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <box size="0.020000 0.020000 0.020000" />
+            </geometry>
+            <material name="Cuboid_material">
+                <color rgba="1.000000 0.180000 0.180001 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Joint">
+        <axis xyz="0 0 1" />
+        <limit effort="25.0" lower="-3.0543260574341" velocity="0.34906584024429" upper="3.0543260574341" />
+        <parent link="robot_base" />
+        <child link="Link" />
+        <origin xyz="-0.299921 0.275036 0.095000" rpy="-3.141593 3.141593 -3.141593" />
+    </joint>
+    <link name="Link">
+        <inertial>
+            <origin xyz="-0.005955 -0.013773 0.057075" rpy="-3.141593 3.141593 -3.141593" />
+            <inertia izz="0.0045068006799654" ixx="0.0043790144282745" ixy="-0.00040607481850261" iyy="0.0039537349715167" iyz="-0.00028847311063162" ixz="-0.00010030899154321" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="Link">
+            <origin xyz="-0.006389 -0.014910 0.069235" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="niryoone_Link_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="visible">
+            <origin xyz="-0.006337 -0.014852 0.069235" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="niryoone_visible_2_vis_1.dae" />
+            </geometry>
+            <material name="visible_2_material">
+                <color rgba="0.460000 0.805600 1.000000 1.0" />
+            </material>
+        </visual>
+        <visual name="visible">
+            <origin xyz="-0.006337 -0.014852 0.069235" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="niryoone_visible_2_vis_2.dae" />
+            </geometry>
+            <material name="visible_2_material">
+                <color rgba="0.150000 0.150000 0.150000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Joint_2">
+        <axis xyz="0 0 1" />
+        <limit effort="25.0" lower="-1.5707963705063" velocity="0.34906584024429" upper="0.64053571224213" />
+        <parent link="Link" />
+        <child link="Link_2" />
+        <origin xyz="0.000000 0.000315 0.087990" rpy="-3.141593 -1.570796 0.000000" />
+    </joint>
+    <link name="Link_2">
+        <inertial>
+            <origin xyz="0.116988 0.000954 0.003784" rpy="3.141593 -1.570796 0.000000" />
+            <inertia izz="0.0025229907152856" ixx="0.013251871463485" ixy="4.3981008040606e-05" iyy="0.013666307251789" iyz="1.2529171214687e-05" ixz="6.9000257787143e-07" />
+            <mass value="1.0" />
+        </inertial>
+        <collision name="Link">
+            <origin xyz="0.103926 0.000017 0.005923" rpy="3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_Link_2_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Link">
+            <origin xyz="0.103926 0.000017 0.005923" rpy="3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_Link_2_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Link">
+            <origin xyz="0.103926 0.000017 0.005923" rpy="3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_Link_2_coll_3.dae" />
+            </geometry>
+        </collision>
+        <visual name="visible">
+            <origin xyz="0.103759 0.000351 0.005865" rpy="-3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_visible_3_vis_1.dae" />
+            </geometry>
+            <material name="visible_3_material">
+                <color rgba="0.150000 0.150000 0.150000 1.0" />
+            </material>
+        </visual>
+        <visual name="visible">
+            <origin xyz="0.103759 0.000351 0.005865" rpy="-3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_visible_3_vis_2.dae" />
+            </geometry>
+            <material name="visible_3_material">
+                <color rgba="0.860000 0.860000 0.860000 1.0" />
+            </material>
+        </visual>
+        <visual name="visible">
+            <origin xyz="0.103759 0.000351 0.005865" rpy="-3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_visible_3_vis_3.dae" />
+            </geometry>
+            <material name="visible_3_material">
+                <color rgba="0.460000 0.805600 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Joint_3">
+        <axis xyz="0 0 1" />
+        <limit effort="25.0" lower="-1.3962633609772" velocity="0.34906584024429" upper="1.570796251297" />
+        <parent link="Link_2" />
+        <child link="Link_3" />
+        <origin xyz="0.210057 -0.000003 -0.000000" rpy="-3.141593 3.141593 3.141593" />
+    </joint>
+    <link name="Link_3">
+        <inertial>
+            <origin xyz="0.034635 -0.024887 0.000160" rpy="3.141593 -1.570796 0.000000" />
+            <inertia izz="0.00092150056101945" ixx="0.00099894376251789" ixy="-2.4465586264237e-06" iyy="0.00033014777818407" iyz="6.5822409418719e-05" ixz="2.0359572653719e-06" />
+            <mass value="0.5" />
+        </inertial>
+        <collision name="Link">
+            <origin xyz="0.036237 -0.028165 0.000361" rpy="3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_Link_3_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Link">
+            <origin xyz="0.036237 -0.028165 0.000361" rpy="3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_Link_3_coll_2.dae" />
+            </geometry>
+        </collision>
+        <collision name="Link">
+            <origin xyz="0.036237 -0.028165 0.000361" rpy="3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_Link_3_coll_3.dae" />
+            </geometry>
+        </collision>
+        <collision name="Link">
+            <origin xyz="0.036237 -0.028165 0.000361" rpy="3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_Link_3_coll_4.dae" />
+            </geometry>
+        </collision>
+        <visual name="visible">
+            <origin xyz="0.013453 -0.021044 -0.000057" rpy="-3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_visible_4_vis_1.dae" />
+            </geometry>
+            <material name="visible_4_material">
+                <color rgba="0.150000 0.150000 0.150000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Joint_4">
+        <axis xyz="0 0 1" />
+        <limit effort="25.0" lower="-3.0543260574341" velocity="0.34906584024429" upper="3.0543260574341" />
+        <parent link="Link_3" />
+        <child link="Link_4" />
+        <origin xyz="0.029953 -0.094863 0.000618" rpy="1.570796 -1.570796 0.000000" />
+    </joint>
+    <link name="Link_4">
+        <inertial>
+            <origin xyz="0.008659 0.000169 0.065392" rpy="-1.570796 3.141593 -3.141593" />
+            <inertia izz="0.0028724228580215" ixx="0.0025273952195776" ixy="-0.00016253500109095" iyy="0.00062075362053851" iyz="1.235168553558e-06" ixz="-1.1154871362065e-06" />
+            <mass value="0.5" />
+        </inertial>
+        <collision name="Link">
+            <origin xyz="0.013321 0.000206 0.048989" rpy="-1.570796 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="niryoone_Link_4_coll_1.dae" />
+            </geometry>
+        </collision>
+        <collision name="Link">
+            <origin xyz="0.013321 0.000206 0.048989" rpy="-1.570796 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="niryoone_Link_4_coll_2.dae" />
+            </geometry>
+        </collision>
+        <visual name="visible">
+            <origin xyz="0.013086 0.000204 0.049162" rpy="-1.570796 3.141593 3.141592" />
+            <geometry>
+                <mesh filename="niryoone_visible_5_vis_1.dae" />
+            </geometry>
+            <material name="visible_5_material">
+                <color rgba="0.150000 0.150000 0.150000 1.0" />
+            </material>
+        </visual>
+        <visual name="visible">
+            <origin xyz="0.013086 0.000204 0.049162" rpy="-1.570796 3.141593 3.141592" />
+            <geometry>
+                <mesh filename="niryoone_visible_5_vis_2.dae" />
+            </geometry>
+            <material name="visible_5_material">
+                <color rgba="0.860000 0.860000 0.860000 1.0" />
+            </material>
+        </visual>
+        <visual name="visible">
+            <origin xyz="0.013086 0.000204 0.049162" rpy="-1.570796 3.141593 3.141592" />
+            <geometry>
+                <mesh filename="niryoone_visible_5_vis_3.dae" />
+            </geometry>
+            <material name="visible_5_material">
+                <color rgba="0.460000 0.805600 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Joint_5">
+        <axis xyz="0 0 1" />
+        <limit effort="25.0" lower="-1.7453292608261" velocity="0.34906584024429" upper="1.9198621511459" />
+        <parent link="Link_4" />
+        <child link="Link_5" />
+        <origin xyz="-0.000618 0.000479 0.126484" rpy="1.570796 3.141593 1.570796" />
+    </joint>
+    <link name="Link_5">
+        <inertial>
+            <origin xyz="0.000166 0.021924 0.002088" rpy="3.141593 -1.570796 0.000000" />
+            <inertia izz="0.0009612549570429" ixx="0.00091435811966805" ixy="-2.2712639936813e-05" iyy="0.00041127815579885" iyz="6.0496919683043e-05" ixz="-2.4701560809953e-06" />
+            <mass value="0.5" />
+        </inertial>
+        <collision name="Link">
+            <origin xyz="0.002818 0.019492 0.002071" rpy="3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_Link_5_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="visible">
+            <origin xyz="0.002799 0.019491 0.002074" rpy="3.141593 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="niryoone_visible_6_vis_1.dae" />
+            </geometry>
+            <material name="visible_6_material">
+                <color rgba="0.150000 0.150000 0.150000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="Joint_6">
+        <axis xyz="0 0 1" />
+        <limit effort="25.0" lower="-2.5743606090546" velocity="0.34906584024429" upper="2.5743606090546" />
+        <parent link="Link_5" />
+        <child link="Link_6" />
+        <origin xyz="0.000479 0.026484 0.000618" rpy="1.570771 -1.570796 0.000000" />
+    </joint>
+    <link name="Link_6">
+        <inertial>
+            <origin xyz="0.000876 0.005604 0.047468" rpy="-1.570771 3.141593 3.141592" />
+            <inertia izz="0.00040415729066901" ixx="0.00040087286758082" ixy="7.1757851733301e-07" iyy="0.00071503808548853" iyz="-4.7635736877754e-07" ixz="1.1827456406942e-07" />
+            <mass value="0.5" />
+        </inertial>
+        <collision name="Link">
+            <origin xyz="0.000832 0.005323 0.047408" rpy="-1.570771 3.141593 3.141592" />
+            <geometry>
+                <mesh filename="niryoone_Link_6_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="visible">
+            <origin xyz="0.000832 0.008822 0.048859" rpy="-1.570771 3.141593 3.141592" />
+            <geometry>
+                <mesh filename="niryoone_visible_7_vis_1.dae" />
+            </geometry>
+            <material name="visible_7_material">
+                <color rgba="0.150000 0.150000 0.150000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="fixed" name="connection">
+        <axis xyz="0 0 1" />
+        <parent link="Link_6" />
+        <child link="NiryoLGripper" />
+        <origin xyz="0.000000 -0.000001 0.048867" rpy="-3.141592 3.141619 -1.570796" />
+    </joint>
+    <link name="NiryoLGripper">
+        <inertial>
+            <origin xyz="0.014182 -0.000000 0.025000" rpy="-1.570796 1.570796 0.000000" />
+            <inertia izz="0.000240240447774" ixx="0.00038493301611375" ixy="0.0" iyy="0.00038574942307446" iyz="0.0" ixz="0.0" />
+            <mass value="0.20000000298023" />
+        </inertial>
+        <collision name="NiryoLGripper">
+            <origin xyz="0.014182 -0.000000 0.025000" rpy="-1.570796 1.570796 0.000000" />
+            <geometry>
+                <box size="0.030067 0.029963 0.044600" />
+            </geometry>
+        </collision>
+        <visual name="visible">
+            <origin xyz="0.007862 -0.000000 0.026555" rpy="3.141500 3.141591 0.000003" />
+            <geometry>
+                <mesh filename="niryoone_visible_8_vis_1.dae" />
+            </geometry>
+            <material name="visible_8_material">
+                <color rgba="0.360000 0.360000 0.360000 1.0" />
+            </material>
+        </visual>
+        <visual name="visible">
+            <origin xyz="0.007862 -0.000000 0.026555" rpy="3.141500 3.141591 0.000003" />
+            <geometry>
+                <mesh filename="niryoone_visible_8_vis_2.dae" />
+            </geometry>
+            <material name="visible_8_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+        <visual name="visible">
+            <origin xyz="0.007862 -0.000000 0.026555" rpy="3.141500 3.141591 0.000003" />
+            <geometry>
+                <mesh filename="niryoone_visible_8_vis_3.dae" />
+            </geometry>
+            <material name="visible_8_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="leftJoint1">
+        <axis xyz="0 0 1" />
+        <limit effort="-2.5" lower="-1.2217304706573" velocity="6.2831854820251" upper="0.0" />
+        <parent link="NiryoLGripper" />
+        <child link="leftLink" />
+        <origin xyz="-0.006163 0.010018 0.024986" rpy="1.570796 3.141593 1.570796" />
+    </joint>
+    <link name="leftLink">
+        <inertial>
+            <origin xyz="-0.004014 -0.009834 0.000262" rpy="1.477676 1.571739 -0.184143" />
+            <inertia izz="2.4673856834299e-05" ixx="0.00015403749629135" ixy="1.1947590618183e-08" iyy="0.00013887249919812" iyz="2.4662322252385e-05" ixz="-1.1815135018839e-08" />
+            <mass value="0.10000000149012" />
+        </inertial>
+        <collision name="leftLink">
+            <origin xyz="-0.007546 -0.018486 0.000262" rpy="1.570710 3.142530 -0.091022" />
+            <geometry>
+                <box size="0.009233 0.008010 0.033559" />
+            </geometry>
+        </collision>
+        <collision name="leftLink">
+            <origin xyz="0.000000 -0.000000 0.000262" rpy="-3.141391 3.142215 1.257643" />
+            <geometry>
+                <cylinder length="0.0080117136240005" radius="0.0093143619596958" />
+            </geometry>
+        </collision>
+        <visual name="leftLink1_visible">
+            <origin xyz="-0.001570 -0.014347 0.000264" rpy="1.570536 4.707771 3.056436" />
+            <geometry>
+                <mesh filename="niryoone_leftLink1_visible_vis_1.dae" />
+            </geometry>
+            <material name="leftLink1_visible_material">
+                <color rgba="0.360000 0.360000 0.360000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="continuous" name="leftJoint">
+        <axis xyz="0 0 1" />
+        <parent link="leftLink" />
+        <child link="leftLink_2" />
+        <origin xyz="-0.009245 -0.033604 0.000000" rpy="3.141592 3.141593 3.141592" />
+    </joint>
+    <link name="leftLink_2">
+        <inertial>
+            <origin xyz="0.007603 -0.036683 0.000043" rpy="1.570982 3.141602 -2.859689" />
+            <inertia izz="2.5882455779598e-05" ixx="0.00021284656013286" ixy="-1.9196623804127e-08" iyy="0.00020689738028542" iyz="-1.651915467973e-09" ixz="1.2626415587019e-05" />
+            <mass value="0.10000000149012" />
+        </inertial>
+        <collision name="leftLink">
+            <origin xyz="-0.000557 -0.014575 0.000048" rpy="1.570774 3.146881 -2.883571" />
+            <geometry>
+                <box size="0.002500 0.016001 0.020600" />
+            </geometry>
+        </collision>
+        <collision name="leftLink">
+            <origin xyz="0.010106 -0.032038 0.000041" rpy="0.000002 3.141591 -3.135789" />
+            <geometry>
+                <box size="0.002500 0.010000 0.016000" />
+            </geometry>
+        </collision>
+        <collision name="leftLink">
+            <origin xyz="0.013674 -0.041051 0.000041" rpy="0.000137 3.141753 -2.350158" />
+            <geometry>
+                <box size="0.002500 0.008912 0.016001" />
+            </geometry>
+        </collision>
+        <collision name="leftLink">
+            <origin xyz="0.016505 -0.049151 0.000041" rpy="0.000002 3.141593 -3.135789" />
+            <geometry>
+                <box size="0.002500 0.011700 0.016000" />
+            </geometry>
+        </collision>
+        <collision name="leftLink">
+            <origin xyz="0.013654 -0.057518 0.000041" rpy="3.141357 3.141591 -1.565022" />
+            <geometry>
+                <box size="0.005000 0.008302 0.010229" />
+            </geometry>
+        </collision>
+        <collision name="leftLink">
+            <origin xyz="0.005659 -0.042223 0.000041" rpy="1.570987 3.141600 -2.859689" />
+            <geometry>
+                <box size="0.002500 0.016000 0.026000" />
+            </geometry>
+        </collision>
+        <collision name="leftLink">
+            <origin xyz="0.002079 -0.027471 0.000041" rpy="0.000062 3.141592 -3.135781" />
+            <geometry>
+                <box size="0.002500 0.005227 0.016000" />
+            </geometry>
+        </collision>
+        <visual name="leftLink2_visible_sub">
+            <origin xyz="0.008217 -0.026842 0.000034" rpy="1.570758 3.136275 -2.896410" />
+            <geometry>
+                <mesh filename="niryoone_leftLink2_visible_sub_vis_1.dae" />
+            </geometry>
+            <material name="leftLink2_visible_sub_material">
+                <color rgba="0.360000 0.360000 0.360000 1.0" />
+            </material>
+        </visual>
+        <visual name="leftLink2_visible_sub">
+            <origin xyz="0.008217 -0.026842 0.000034" rpy="1.570758 3.136275 -2.896410" />
+            <geometry>
+                <mesh filename="niryoone_leftLink2_visible_sub_vis_2.dae" />
+            </geometry>
+            <material name="leftLink2_visible_sub_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+        <visual name="leftLink2_visible_sub">
+            <origin xyz="0.008217 -0.026842 0.000034" rpy="1.570758 3.136275 -2.896410" />
+            <geometry>
+                <mesh filename="niryoone_leftLink2_visible_sub_vis_3.dae" />
+            </geometry>
+            <material name="leftLink2_visible_sub_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="continuous" name="leftJoint_2">
+        <axis xyz="0 0 1" />
+        <parent link="leftLink_2" />
+        <child link="leftLink_3" />
+        <origin xyz="0.009778 -0.017663 0.000000" rpy="-3.141593 3.141593 3.141593" />
+    </joint>
+    <link name="leftLink_3">
+        <inertial>
+            <origin xyz="0.001328 0.014714 -0.000285" rpy="1.570583 3.140431 -0.110097" />
+            <inertia izz="1.910002387486e-05" ixx="9.6027516811309e-05" ixy="0.0" iyy="8.321080079531e-05" iyz="0.0" ixz="0.0" />
+            <mass value="0.085737496614456" />
+        </inertial>
+        <collision name="leftLink">
+            <origin xyz="0.001328 0.014714 -0.000285" rpy="1.570583 3.140431 -0.110097" />
+            <geometry>
+                <box size="0.007108 0.016021 0.035883" />
+            </geometry>
+        </collision>
+        <visual name="leftLink3_visible_sub">
+            <origin xyz="0.001328 0.014714 -0.000285" rpy="1.570583 3.140431 -0.110097" />
+            <geometry>
+                <mesh filename="niryoone_leftLink3_visible_sub_vis_1.dae" />
+            </geometry>
+            <material name="leftLink3_visible_sub_material">
+                <color rgba="0.360000 0.360000 0.360000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="revolute" name="rightJoint1">
+        <axis xyz="0 0 1" />
+        <limit effort="2.5" lower="0.0" velocity="0.17453292012215" upper="1.2217304706573" />
+        <parent link="NiryoLGripper" />
+        <child link="rightLink" />
+        <origin xyz="-0.006163 -0.009997 0.024986" rpy="1.570795 3.141593 1.570796" />
+    </joint>
+    <link name="rightLink">
+        <inertial>
+            <origin xyz="0.004013 -0.009834 0.000262" rpy="-1.477065 1.571740 0.184754" />
+            <inertia izz="2.4670983084624e-05" ixx="0.00015404156414756" ixy="-1.1144528880372e-08" iyy="0.00013887932317613" iyz="-2.4659147384594e-05" ixz="-2.061432469046e-08" />
+            <mass value="0.10000000149012" />
+        </inertial>
+        <collision name="rightLink">
+            <origin xyz="0.007546 -0.018486 0.000262" rpy="-1.570882 3.140655 -3.050571" />
+            <geometry>
+                <box size="0.009233 0.008010 0.033559" />
+            </geometry>
+        </collision>
+        <collision name="rightLink">
+            <origin xyz="0.000000 0.000000 0.000262" rpy="-3.141392 3.142214 1.257644" />
+            <geometry>
+                <cylinder length="0.0080117136240005" radius="0.0093143619596958" />
+            </geometry>
+        </collision>
+        <visual name="rightLink1_visible">
+            <origin xyz="0.001688 -0.014357 0.000264" rpy="1.570748 4.707770 0.085465" />
+            <geometry>
+                <mesh filename="niryoone_rightLink1_visible_vis_1.dae" />
+            </geometry>
+            <material name="rightLink1_visible_material">
+                <color rgba="0.360000 0.360000 0.360000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="continuous" name="rightJoint">
+        <axis xyz="0 0 1" />
+        <parent link="rightLink" />
+        <child link="rightLink_2" />
+        <origin xyz="0.009245 -0.033604 -0.000000" rpy="-3.141593 3.141593 -3.141593" />
+    </joint>
+    <link name="rightLink_2">
+        <inertial>
+            <origin xyz="-0.007604 -0.036683 0.000047" rpy="-1.570610 3.141584 -0.281904" />
+            <inertia izz="2.5882455779598e-05" ixx="0.00021284656013286" ixy="-1.9196623804127e-08" iyy="0.00020689738028542" iyz="-1.651915467973e-09" ixz="1.2626415587019e-05" />
+            <mass value="0.10000000149012" />
+        </inertial>
+        <collision name="rightLink">
+            <origin xyz="0.000556 -0.014575 0.000041" rpy="-1.570818 3.136304 -0.258022" />
+            <geometry>
+                <box size="0.002500 0.016001 0.020600" />
+            </geometry>
+        </collision>
+        <collision name="rightLink">
+            <origin xyz="-0.010107 -0.032038 0.000048" rpy="-3.141590 3.141594 -0.005804" />
+            <geometry>
+                <box size="0.002500 0.010000 0.016000" />
+            </geometry>
+        </collision>
+        <collision name="rightLink">
+            <origin xyz="-0.013675 -0.041051 0.000049" rpy="-3.141455 3.141432 -0.791435" />
+            <geometry>
+                <box size="0.002500 0.008912 0.016001" />
+            </geometry>
+        </collision>
+        <collision name="rightLink">
+            <origin xyz="-0.016506 -0.049151 0.000048" rpy="-3.141590 3.141593 -0.005804" />
+            <geometry>
+                <box size="0.002500 0.011700 0.016000" />
+            </geometry>
+        </collision>
+        <collision name="rightLink">
+            <origin xyz="-0.013655 -0.057518 0.000048" rpy="-0.000236 3.141594 -1.576571" />
+            <geometry>
+                <box size="0.005000 0.008302 0.010229" />
+            </geometry>
+        </collision>
+        <collision name="rightLink">
+            <origin xyz="-0.005660 -0.042223 0.000048" rpy="-1.570605 3.141585 -0.281904" />
+            <geometry>
+                <box size="0.002500 0.016000 0.026000" />
+            </geometry>
+        </collision>
+        <collision name="rightLink">
+            <origin xyz="-0.002080 -0.027471 0.000048" rpy="-3.141530 3.141593 -0.005812" />
+            <geometry>
+                <box size="0.002500 0.005227 0.016000" />
+            </geometry>
+        </collision>
+        <visual name="rightLink2_visible_sub">
+            <origin xyz="-0.008239 -0.026867 -0.000042" rpy="1.570562 3.141723 -0.245862" />
+            <geometry>
+                <mesh filename="niryoone_rightLink2_visible_sub_vis_1.dae" />
+            </geometry>
+            <material name="rightLink2_visible_sub_material">
+                <color rgba="0.360000 0.360000 0.360000 1.0" />
+            </material>
+        </visual>
+        <visual name="rightLink2_visible_sub">
+            <origin xyz="-0.008239 -0.026867 -0.000042" rpy="1.570562 3.141723 -0.245862" />
+            <geometry>
+                <mesh filename="niryoone_rightLink2_visible_sub_vis_2.dae" />
+            </geometry>
+            <material name="rightLink2_visible_sub_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+        <visual name="rightLink2_visible_sub">
+            <origin xyz="-0.008239 -0.026867 -0.000042" rpy="1.570562 3.141723 -0.245862" />
+            <geometry>
+                <mesh filename="niryoone_rightLink2_visible_sub_vis_3.dae" />
+            </geometry>
+            <material name="rightLink2_visible_sub_material">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint type="continuous" name="rightJoint_2">
+        <axis xyz="0 0 1" />
+        <parent link="rightLink_2" />
+        <child link="rightLink_3" />
+        <origin xyz="-0.009779 -0.017663 0.000000" rpy="-3.141592 3.141593 -3.141593" />
+    </joint>
+    <link name="rightLink_3">
+        <inertial>
+            <origin xyz="-0.001328 0.014714 -0.000285" rpy="-1.571009 3.142754 -3.031496" />
+            <inertia izz="1.910002387486e-05" ixx="9.6027516811309e-05" ixy="0.0" iyy="8.321080079531e-05" iyz="0.0" ixz="0.0" />
+            <mass value="0.085737496614456" />
+        </inertial>
+        <collision name="rightLink">
+            <origin xyz="-0.001328 0.014714 -0.000285" rpy="-1.571009 3.142754 -3.031496" />
+            <geometry>
+                <box size="0.007108 0.016021 0.035883" />
+            </geometry>
+        </collision>
+        <visual name="rightLink3_visible_sub">
+            <origin xyz="-0.001426 0.014658 -0.000162" rpy="1.571011 3.140432 -3.031496" />
+            <geometry>
+                <mesh filename="niryoone_rightLink3_visible_sub_vis_1.dae" />
+            </geometry>
+            <material name="rightLink3_visible_sub_material">
+                <color rgba="0.360000 0.360000 0.360000 1.0" />
+            </material>
+        </visual>
+    </link>
+</robot>

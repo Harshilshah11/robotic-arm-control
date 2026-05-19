@@ -156,7 +156,7 @@ class Handler(BaseHTTPRequestHandler):
         if base.startswith("/stepper") or base.startswith("/gripper"):
             return self._forward(self.path)
 
-        # POST /tasks  →  create task (just touching the file is enough)
+        #    /tasks  →  create task (just touching the file is enough)
         if base == "/tasks":
             body = self._body()
             name = body.get("name", "").strip()

@@ -20,7 +20,7 @@
       "joints": {
         "joint1": -50,
         "joint2": 0,
-        "joint3": -25
+        "joint3": -20
       },
       "gripper": "open"
     },
@@ -28,7 +28,7 @@
       "joints": {
         "joint1": -50,
         "joint2": 50,
-        "joint3": -25
+        "joint3": -20
       },
       "gripper": "open"
     },
@@ -36,7 +36,7 @@
       "joints": {
         "joint1": -50,
         "joint2": 50,
-        "joint3": -25
+        "joint3": -20
       },
       "gripper": "close"
     },
@@ -44,7 +44,7 @@
       "joints": {
         "joint1": -50,
         "joint2": 0,
-        "joint3": -25
+        "joint3": -20
       },
       "gripper": "close"
     },
